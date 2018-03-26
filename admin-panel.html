@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-tit-client">Панель адміністратора</div>
+            <div class="language">
+                <select class="browser-default">
+                    <option value="1">Українська</option>
+                    <option value="2">Polish</option>
+                </select>
+            </div>
+            <a class="exit" routerLink="/login">Выйти</a>
+        </nav>
+    </header>
+    
+    <div class="admin-panel-container">
+        <ul>
+            <li><a href="edit-questions.html">Редагування питань</a></li>
+            <li><a href="edit-tests.html">Редагування тестів</a></li>
+            <li><a href="user-list.html">Список користувачів</a></li>
+            <li><a href="view-results-details.html">Результати теста</a></li>
+        </ul> 
+    </div>
+      
+</body>
+</html>

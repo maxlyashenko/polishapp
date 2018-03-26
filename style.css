@@ -1,0 +1,315 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*  */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/*  */
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+nav {
+	position: relative;
+}
+
+.header-title {
+	font-size: 24px;
+	margin-left: 20px;
+	padding-top: 20px;
+}
+
+.timer {
+	position: absolute;
+	top: 20px;
+	right: 50vw;
+	font-size: 18px;
+}
+
+h1 {
+	font-size: 36px;
+}
+
+.test-question-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 90vh;
+}
+
+/*  */
+
+.question-title {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+.test-question-item ul li {
+	font-size: 18px;
+	margin-top: 10px;
+}
+
+label {
+	color: #000;
+}
+
+/* */
+
+.edit-questions-container {
+	display: flex;
+}
+
+.qustions-list__title {
+	font-size: 24px;
+}
+
+.questions-list {
+	width: 30%;
+	margin-left: 30px;
+	margin-top: 30px;
+}
+
+.questions-list ul {
+	height: 60vh;
+	border: 1px solid #ccc;
+	overflow-y: scroll;
+}
+
+.question-form {
+	margin-left: 30px;
+	margin-top: 50px;
+ 	width: 30%; 
+}
+
+.option-container {
+	display: flex;
+}
+
+.option-container-list {
+	width: 50%;
+}
+
+.right-options {
+	width: 50%;
+	margin-left: 50px;
+}
+
+
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:before,
+[type="radio"].with-gap:checked + label:after {
+  border: 2px solid #ff5353;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:after {
+  background-color: #ff5353;
+}
+
+.btn {
+	margin-top: 20px;
+	background-color: #ff5353;
+}
+
+.btn:hover {
+	background-color: #ff6868;
+}
+
+.btn:focus {
+	background-color: #ff6868;
+}
+
+.collection-item:hover {
+	background-color: #ffa0a0;
+	color: #fff;
+}
+
+.collection .collection-item.active {
+	background-color: #ff6868;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]) {
+	border-bottom: 1px solid #ff6868;
+	-webkit-box-shadow: 0 1px 0 0 #ff6868;
+	box-shadow: 0 1px 0 0 #ff6868;
+}
+
+[type="checkbox"].filled-in:checked + label:after {
+	border: 2px solid #ff6868;
+	background-color: #ff6868;
+}
+
+.right-option-check ul {
+	margin-top: 15px;
+}
+
+.right-option-check ul li {
+	margin-bottom: 45px;
+}
+
+.registraion-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 80vh;
+}
+
+.registraion-container form {
+	display: flex;
+	flex-direction: column;
+	width: 20vw;
+	align-items: center;
+}
+
+.registraion-container form button {
+	width: 60%;
+}
+
+.registration-item input[type="checkbox"] + label  {
+	margin-top: 15px;
+	width: 20vw;
+} 
+
+.registration-item button {
+	margin-top: 25px;
+}
+
+.view-result-table th {
+	color: #ff5353;
+}
+
+.view-result-table th, .view-result-table td {
+	padding: 10px;
+}
+
+.view-result-table td ul li {
+	margin-bottom: 5px;
+}
+
+.right-question {
+	background-color: rgb(84, 218, 84);
+	display: inline-block; 
+}
+
+.wrong-question {
+	background-color: rgb(255, 130, 130);
+	display: inline-block; 
+}
+
+.view-result-table td ul li {
+	padding: 3px;
+}
+
+.result-detail-title {
+	padding: 20px 0px 10px 10px;
+}
+
+.username-result {
+	color: #ff5353;
+}
+
+.language {
+	width: 9%;
+	position: absolute;
+	top: 5px;
+	right: 20px;
+}
+
+.language select {
+	background-color: #ee6e73;
+	border: none;
+	color: #fff;
+}
+
+.language select option {
+	background-color: #fff;
+	color: #000;
+}
+
+input[type="text"] {
+	position: relative;
+}
+
+.keyboardInputInitiator {
+	position: absolute;	
+}
+
+.not-found-image {
+    position: relative;
+}
+
+.not-found-image img {
+    position: absolute;
+    top: 5vh;
+    left: 18vw;
+    width: 60%;
+}
+
+.not-found-link a {
+    position: absolute;
+    bottom: 10vh;
+    left: 40vw;
+}
+
+.btn {
+	margin-top: 20px;
+	background-color: #ff5353;
+}
+
+.btn:hover {
+	background-color: #ff6868;
+}
+
+.btn:focus {
+	background-color: #ff6868;
+}
+

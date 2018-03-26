@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="keyboard/keyboard.js" charset="UTF-8"></script>
+    <link rel="stylesheet" type="text/css" href="keyboard/keyboard.css">
+</head>
+<body>
+    <header> 
+        <nav>
+            <div class="header-title">Тест</div> 
+            <div class="timer">00:00</div> 
+        </nav>
+        <div class="language">
+            <select class="browser-default">
+                <option value="1">Українська</option>
+                <option value="2">Польська</option>
+            </select>
+        </div>
+    </header>
+    <div class="test-question-container">
+        <div class="test-question-item">
+            <div class="question-title">1.	Jak się Pan nazywa?</div>
+            <ul>
+                <li><input class="with-gap" name="question" type="radio" id="test1"><label for="test1">Pan nazywa się Kowalski.</label></li>
+                <li><input class="with-gap" name="question" type="radio" id="test2"><label for="test2">Nazywa się Kowalski.</label></li>
+                <li><input class="with-gap" name="question" type="radio" id="test3"><label for="test3">Nazywam się Kowalski.</label></li>
+            </ul>
+            <button class="waves-effect waves-light btn" type="submit" name="action">Відповісти</button>
+        </div>
+    </div>
+</body>
+</html>
