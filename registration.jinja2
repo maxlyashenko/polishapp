@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="../node_modules/materialize-css/dist/css/materialize.css">
+    <title>Регістрація</title>
+    <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav>
+            <div class="header-title">Регістрація</div> 
         </nav>
         <div class="language">
             <select class="browser-default">
@@ -18,6 +19,7 @@
                 <option value="2">Польська</option>
             </select>
         </div>
+        <a class="exit" href="login.html">Вийти</a>
     </header>
     <div class="registraion-container">
         <div class="registration-item">
@@ -25,8 +27,8 @@
                 <input type="text" placeholder="Им'я: ">
                 <input type="text" placeholder="Телефон: ">
                 <div>
-                    <input type="checkbox" class="filled-in" id="learnPolish">
-                    <label for="learnPolish">Вже вивчав польську</label>
+                    <input type="checkbox" class="filled-in" id="learnedPolish">
+                    <label for="learnedPolish">Вже вивчав польську</label>
                 </div>
                 <button class="waves-effect waves-light btn">Пройти тест</button>
             </form>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Редагування питань</title>
+    <link rel="stylesheet" href="node_modules/materialize-css/dist/css/materialize.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="keyboard/keyboard.js" charset="UTF-8"></script>
+    <link rel="stylesheet" type="text/css" href="keyboard/keyboard.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="header-title">Редагування питань</div>
+            <div class="language">
+                <select class="browser-default">
+                    <option value="1">Українська</option>
+                    <option value="2">Polish</option>
+                </select>
+            </div>
+            <a class="exit" href="login.html">Вийти</a>
+        </nav>
+    </header>
+    <div class="edit-questions-container">
+        <div class="questions-list">
+                <h4 class="qustions-list__title">Список питань</h4>
+                {% raw %}
+                <ul class="collection">
+                    {% for question in questions %} 
+                        <li class="collection-item" {% if id == selectedId %} class="active"{% endif
+                            %}>{{ question }}</li>
+                    {% endfor %}
+                </ul>
+                {% endraw %}
+                <button class="waves-effect waves-light btn">Додати</button>
+                <button class="waves-effect waves-light btn">Видалити</button>
+            </div>
+            
+        <div class="question-form">
+            <ul>
+                <li><input type="text" placeholder="Питання" class="keyboardInput"></li>
+                <li>   
+                    <select class="browser-default">
+                        <option value="" disabled selected>Тип питання</option>
+                        <option value="1">Відповідь записується вручну</option>
+                        <option value="2">З варіантами відповідей</option>
+                    </select>
+                </li>
+                <li><input type="text" class="keyboardInput" placeholder="Кількість балів"></li>
+            </ul>
+
+            <div class="right-answer">
+                <input type="text" class="keyboardInput" placeholder="Запишіть правильну відповідь">
+            </div>
+
+            <div class="option-container">
+                <div class="option-container-list">
+                    <div class="option-container-title">Варіанти відповідей</div>
+                    <div class="options-of-answers">
+                        <ul id="variant">
+                            <li><input type="text" class="keyboardInput" placeholder="Варіант 1"></li>
+                        </ul>
+                    </div>
+                    <button class="waves-effect waves-light btn btn-floating" onclick="addVariant()">+</button> 
+                </div>
+                <div class="right-options">
+                    Відзначити як правильне
+                    <div class="right-option-check">
+                        <ul>
+                            <li class="variant" >
+                                <p>
+                                    <input type="checkbox" class="filled-in" id="var1">
+                                    <label for="var1"></label>
+                                </p>
+                            </li>
+                        </ul> 
+                    </div>
+                </div>
+                <ul>
+                    <li><button class="delete-variant variant">X</button></li>
+                </ul>
+
+            </div>
+
+            <form action="#">
+                    <div class="file-field input-field">
+                      <div class="btn">
+                        <span>File</span>
+                        <input type="file">
+                      </div>
+                      <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                      </div>
+                    </div>
+                  </form>
+            <button class="waves-effect waves-light btn">Зберегти</button>
+        </div>
+    </div>
+    <script src="variants.js"></script>
+</body>
+</html>
